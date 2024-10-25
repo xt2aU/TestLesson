@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6ac87ca7-7f84-4208-8f2c-5ff9084c142c" name="Changes" comment="TestStart">
-      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Park.java" beforeDir="false" afterPath="$PROJECT_DIR$/Park.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestLesson/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestLesson/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestLesson/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestLesson/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Animal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/TestLesson.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TestLesson.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +24,19 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="main" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
     <option name="PUSH_TAGS">
       <GitPushTagMode>
         <option name="argument" value="--follow-tags" />
@@ -31,7 +45,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Lesson1" />
+        <entry key="$PROJECT_DIR$" value="Lesson_5" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -47,21 +61,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Lesson1.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Lesson2&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Lesson1.executor": "Run",
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "Lesson__10",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -85,7 +99,8 @@
       <workItem from="1728497273855" duration="363000" />
       <workItem from="1729230200266" duration="187000" />
       <workItem from="1729236083259" duration="162000" />
-      <workItem from="1729401761697" duration="666000" />
+      <workItem from="1729401761697" duration="1698000" />
+      <workItem from="1729868188461" duration="387000" />
     </task>
     <task id="LOCAL-00001" summary="TestStart">
       <option name="closed" value="true" />
@@ -159,7 +174,23 @@
       <option name="project" value="LOCAL" />
       <updated>1728335029123</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="TestStart">
+      <option name="closed" value="true" />
+      <created>1729403408444</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1729403408445</updated>
+    </task>
+    <task id="LOCAL-00011" summary="TestStart">
+      <option name="closed" value="true" />
+      <created>1729868245442</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1729868245442</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,7 +207,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="Lesson1" />
+                        <option value="Lesson_10" />
                       </list>
                     </value>
                   </entry>
