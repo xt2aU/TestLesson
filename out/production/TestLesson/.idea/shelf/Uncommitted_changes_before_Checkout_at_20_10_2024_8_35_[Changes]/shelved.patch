@@ -1,0 +1,208 @@
+Index: Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>public static void main(String[] args) {\r\n    //Создание нового объекта класса Employee\r\n    Employee employee = new Employee(\"Иванов Иван Иванович\", \"Менеджер\", \"ivanov@example.com\", \"123-456-7890\", 50000.0, 30);\r\n    //Вывод в консоль информации об объекте класса Employee\r\n    employee.printInfo();\r\n\r\n    // Создание массива из 5-ти сотрудников\r\n    Employee[] employees = new Employee[5];\r\n\r\n    employees[0] = new Employee(\"Иванов Иван Иванович\", \"Менеджер\", \"ivanov@example.com\", \"123-456-7890\", 50000.0, 30);\r\n    employees[1] = new Employee(\"Петров Петр Петрович\", \"Разработчик\", \"petrov@example.com\", \"234-567-8901\", 60000.0, 28);\r\n    employees[2] = new Employee(\"Сидоров Сидор Сидорович\", \"Аналитик\", \"sidorov@example.com\", \"345-678-9012\", 55000.0, 35);\r\n    employees[3] = new Employee(\"Кузнецов Кузьма Кузьмич\", \"Тестировщик\", \"kuznetsov@example.com\", \"456-789-0123\", 45000.0, 25);\r\n    employees[4] = new Employee(\"Смирнов Сергей Сергеевич\", \"Дизайнер\", \"smirnov@example.com\", \"567-890-1234\", 52000.0, 32);\r\n}
+===================================================================
+diff --git a/Main.java b/Main.java
+--- a/Main.java	
++++ b/Main.java	
+@@ -1,15 +1,94 @@
+-public static void main(String[] args) {
+-    //Создание нового объекта класса Employee
+-    Employee employee = new Employee("Иванов Иван Иванович", "Менеджер", "ivanov@example.com", "123-456-7890", 50000.0, 30);
+-    //Вывод в консоль информации об объекте класса Employee
+-    employee.printInfo();
++public class Employee {
++    private String fullName;
++    private String position;
++    private String email;
++    private String phone;
++    private double salary;
++    private int age;
++
++    // Конструктор класса
++    public Employee(String fullName, String position, String email, String phone, double salary, int age) {
++        this.fullName = fullName;
++        this.position = position;
++        this.email = email;
++        this.phone = phone;
++        this.salary = salary;
++        this.age = age;
++    }
++
++    // Метод для вывода информации об объекте в консоль
++    public void printInfo() {
++        System.out.println("ФИО: " + fullName);
++        System.out.println("Должность: " + position);
++        System.out.println("Email: " + email);
++        System.out.println("Телефон: " + phone);
++        System.out.println("Зарплата: " + salary);
++        System.out.println("Возраст: " + age);
++    }
++}
++
++public class Park {
++    // Внутренний класс для хранения информации об аттракционах
++    public class Attraction {
++        private String name;
++        private String workingHours;
++        private double price;
++
++        // Конструктор
++        public Attraction(String name, String workingHours, double price) {
++            this.name = name;
++            this.workingHours = workingHours;
++            this.price = price;
++        }
++        // Геттеры и сеттеры
++        public String getName() {
++            return name;
++        }
++
++        public void setName(String name) {
++            this.name = name;
++        }
++
++        public String getWorkingHours() {
++            return workingHours;
++        }
++
++        public void setWorkingHours(String workingHours) {
++            this.workingHours = workingHours;
++        }
++
++        public double getPrice() {
++            return price;
++        }
++
++        public void setPrice(double price) {
++            this.price = price;
++        }
++
++    }
++}
++public class Main {
++    public static void main(String[] args) {
++        //Создание нового объекта класса Employee
++        Employee employee = new Employee("Иванов Иван Иванович", "Менеджер", "ivanov@example.com", "123-456-7890", 50000.0, 30);
++        //Вывод в консоль информации об объекте класса Employee
++        employee.printInfo();
+ 
+-    // Создание массива из 5-ти сотрудников
+-    Employee[] employees = new Employee[5];
++        // Создание массива из 5-ти сотрудников
++        Employee[] employees = new Employee[5];
+ 
+-    employees[0] = new Employee("Иванов Иван Иванович", "Менеджер", "ivanov@example.com", "123-456-7890", 50000.0, 30);
+-    employees[1] = new Employee("Петров Петр Петрович", "Разработчик", "petrov@example.com", "234-567-8901", 60000.0, 28);
+-    employees[2] = new Employee("Сидоров Сидор Сидорович", "Аналитик", "sidorov@example.com", "345-678-9012", 55000.0, 35);
+-    employees[3] = new Employee("Кузнецов Кузьма Кузьмич", "Тестировщик", "kuznetsov@example.com", "456-789-0123", 45000.0, 25);
+-    employees[4] = new Employee("Смирнов Сергей Сергеевич", "Дизайнер", "smirnov@example.com", "567-890-1234", 52000.0, 32);
++        employees[0] = new Employee("Иванов Иван Иванович", "Менеджер", "ivanov@example.com", "123-456-7890", 50000.0, 30);
++        employees[1] = new Employee("Петров Петр Петрович", "Разработчик", "petrov@example.com", "234-567-8901", 60000.0, 28);
++        employees[2] = new Employee("Сидоров Сидор Сидорович", "Аналитик", "sidorov@example.com", "345-678-9012", 55000.0, 35);
++        employees[3] = new Employee("Кузнецов Кузьма Кузьмич", "Тестировщик", "kuznetsov@example.com", "456-789-0123", 45000.0, 25);
++        employees[4] = new Employee("Смирнов Сергей Сергеевич", "Дизайнер", "smirnov@example.com", "567-890-1234", 52000.0, 32);
++
++        // Создание объекта класса Attraction
++        Park.Attraction attraction = new Park.Attraction("Roller Coaster", "10:00 AM - 8:00 PM", 15.99);
++
++        // Вывод информации о аттракционе
++        System.out.println("Name: " + attraction.getName());
++        System.out.println("Working Hours: " + attraction.getWorkingHours());
++        System.out.println("Price: $" + attraction.getPrice());
++    }
+ }
+\ No newline at end of file
+Index: Park.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>public class Park {\r\n    // Внутренний класс для хранения информации об аттракционах\r\n    public static class Attraction {\r\n        private String name;\r\n        private String workingHours;\r\n        private double price;\r\n\r\n        // Конструктор класса Attraction\r\n        public Attraction(String name, String workingHours, double price) {\r\n            this.name = name;\r\n            this.workingHours = workingHours;\r\n            this.price = price;\r\n        }\r\n    }\r\n}\r\n
+===================================================================
+diff --git a/Park.java b/Park.java
+--- a/Park.java	
++++ b/Park.java	
+@@ -1,6 +1,6 @@
+ public class Park {
+     // Внутренний класс для хранения информации об аттракционах
+-    public static class Attraction {
++    public class Attraction {
+         private String name;
+         private String workingHours;
+         private double price;
+Index: out/production/TestLesson/.idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"6ac87ca7-7f84-4208-8f2c-5ff9084c142c\" name=\"Changes\" comment=\"TestStart\">\r\n      <change afterPath=\"$PROJECT_DIR$/Employee.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/Main.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"PUSH_TAGS\">\r\n      <GitPushTagMode>\r\n        <option name=\"argument\" value=\"--follow-tags\" />\r\n        <option name=\"title\" value=\"Current Branch\" />\r\n      </GitPushTagMode>\r\n    </option>\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"Lesson2\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 8\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2mv5TwkMzEtmZt8hrt5FaxlZOn8\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"Application.Lesson1.executor\": \"Run\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"git-widget-placeholder\": \"Lesson2\",\r\n    \"kotlin-language-version-configured\": \"true\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"nodejs_package_manager_path\": \"npm\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  }\r\n}]]></component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150\" />\r\n        <option value=\"bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"6ac87ca7-7f84-4208-8f2c-5ff9084c142c\" name=\"Changes\" comment=\"\" />\r\n      <created>1727944220480</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1727944220480</updated>\r\n      <workItem from=\"1727944221657\" duration=\"371000\" />\r\n      <workItem from=\"1727950756281\" duration=\"709000\" />\r\n      <workItem from=\"1728017847004\" duration=\"7413000\" />\r\n      <workItem from=\"1728334068504\" duration=\"354000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"TestStart\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1727944438715</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1727944438715</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"TestStart\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1728025478436</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1728025478436</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"TestStart\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1728025709507</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1728025709507</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"TestStart\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1728334135993</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1728334135994</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"TestStart\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1728334259747</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1728334259747</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"TestStart\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1728334270332</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1728334270332</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"TestStart\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1728334280518</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1728334280518</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"8\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"Lesson1\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"TestStart\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"TestStart\" />\r\n  </component>\r\n</project>
+===================================================================
+diff --git a/out/production/TestLesson/.idea/workspace.xml b/out/production/TestLesson/.idea/workspace.xml
+--- a/out/production/TestLesson/.idea/workspace.xml	
++++ b/out/production/TestLesson/.idea/workspace.xml	
+@@ -5,8 +5,11 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="6ac87ca7-7f84-4208-8f2c-5ff9084c142c" name="Changes" comment="TestStart">
+-      <change afterPath="$PROJECT_DIR$/Employee.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Park.java" beforeDir="false" afterPath="$PROJECT_DIR$/Park.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/TestLesson/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestLesson/.idea/misc.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/TestLesson/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestLesson/.idea/workspace.xml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -29,7 +32,7 @@
+     </option>
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
+-        <entry key="$PROJECT_DIR$" value="Lesson2" />
++        <entry key="$PROJECT_DIR$" value="Lesson1" />
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+@@ -48,6 +51,7 @@
+   <component name="PropertiesComponent"><![CDATA[{
+   "keyToString": {
+     "Application.Lesson1.executor": "Run",
++    "Application.Main.executor": "Run",
+     "RunOnceActivity.ShowReadmeOnStart": "true",
+     "git-widget-placeholder": "Lesson2",
+     "kotlin-language-version-configured": "true",
+@@ -78,7 +82,10 @@
+       <workItem from="1727944221657" duration="371000" />
+       <workItem from="1727950756281" duration="709000" />
+       <workItem from="1728017847004" duration="7413000" />
+-      <workItem from="1728334068504" duration="354000" />
++      <workItem from="1728334068504" duration="976000" />
++      <workItem from="1728497273855" duration="363000" />
++      <workItem from="1729230200266" duration="187000" />
++      <workItem from="1729236083259" duration="162000" />
+     </task>
+     <task id="LOCAL-00001" summary="TestStart">
+       <option name="closed" value="true" />
+@@ -136,7 +143,23 @@
+       <option name="project" value="LOCAL" />
+       <updated>1728334280518</updated>
+     </task>
+-    <option name="localTasksCounter" value="8" />
++    <task id="LOCAL-00008" summary="TestStart">
++      <option name="closed" value="true" />
++      <created>1728334991507</created>
++      <option name="number" value="00008" />
++      <option name="presentableId" value="LOCAL-00008" />
++      <option name="project" value="LOCAL" />
++      <updated>1728334991507</updated>
++    </task>
++    <task id="LOCAL-00009" summary="TestStart">
++      <option name="closed" value="true" />
++      <created>1728335029123</created>
++      <option name="number" value="00009" />
++      <option name="presentableId" value="LOCAL-00009" />
++      <option name="project" value="LOCAL" />
++      <updated>1728335029123</updated>
++    </task>
++    <option name="localTasksCounter" value="10" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
