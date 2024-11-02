@@ -1,0 +1,38 @@
+Index: Lesson1/Lesson1.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package Lesson1;\r\n\r\nimport java.util.Scanner;\r\n\r\npublic class Lesson1 {\r\n    public static void main(String[] args) {\r\n    printThreeWords();\r\n    checkSumSign();\r\n    printColor();\r\n    compareNumbers();\r\n    checkSumAdd();\r\n    checkModul();\r\n    checkModulReturn();\r\n    printSeveralString();\r\n    isLeapYear();\r\n    arrayInverter();\r\n    arrayFill();\r\n    arrayModifier();\r\n    arrayFillDiagonal();\r\n    arrayCreator();\r\n    }\r\n\r\n    private static void printThreeWords() {\r\n        System.out.println(\"Orange\");\r\n        System.out.println(\"Banana\");\r\n        System.out.println(\"Apple\");\r\n    }\r\n\r\n    private static void checkSumSign() {\r\n        int a = 3;\r\n        int b = 1;\r\n        if (a + b >= 0) {\r\n            System.out.println(\"Сумма положительная\");\r\n        } else {\r\n            System.out.println(\"Сумма отрицательная\");\r\n        }\r\n    }\r\n\r\n    private static void printColor() {\r\n        int value = 5;\r\n        if (value <= 0) {\r\n            System.out.println(\"Красный\");\r\n        } else if (value > 0 && value <= 100) {\r\n            System.out.println(\"Жёлтый\");\r\n        } else if (value > 100) {\r\n            System.out.println(\"Зеленый\");\r\n        }\r\n    }\r\n\r\n    private static void compareNumbers() {\r\n        int a = 10;\r\n        int b = 7;\r\n        boolean compare = (a >= b);\r\n        if (compare) {\r\n            System.out.println(\"a >=b\");\r\n        } else {\r\n            System.out.println(\"a < b\");\r\n        }\r\n    }\r\n\r\n    private static boolean checkSumAdd() {\r\n        Scanner sc = new Scanner(System.in);\r\n        System.out.println(\"Введите первое число\");\r\n        int a = sc.nextInt();\r\n        System.out.println(\"Введите второе число\");\r\n        int b = sc.nextInt();\r\n        int sum = a + b;\r\n        boolean inRange = sum >= 10 && sum <= 20;\r\n        return inRange;\r\n    }\r\n\r\n    private static void checkModul() {\r\n        Scanner sc = new Scanner(System.in);\r\n        System.out.println(\"Введите число\");\r\n        int a = sc.nextInt();\r\n        if (a >= 0) {\r\n            System.out.println(\"Вы ввели положительное число\");\r\n        } else {\r\n            System.out.println(\"Вы ввели отрицательное число\");\r\n        }\r\n    }\r\n\r\n    private static boolean checkModulReturn() {\r\n        Scanner sc = new Scanner(System.in);\r\n        System.out.println(\"Введите число\");\r\n        int a = sc.nextInt();\r\n        boolean modul = a < 0;\r\n        return modul;\r\n    }\r\n\r\n    private static void printSeveralString() {\r\n        Scanner sc = new Scanner(System.in);\r\n        System.out.println(\"Введите строку\");\r\n        String str = sc.nextLine();\r\n        System.out.println(\"Введите количество повторений\");\r\n        int count = sc.nextInt();\r\n        for (int i = 0; i < count; i++) {\r\n            System.out.println(str);\r\n        }\r\n    }\r\n\r\n    public static boolean isLeapYear() {\r\n    Scanner sc = new Scanner(System.in);\r\n    int year = sc.nextInt();\r\n        if (year % 4 == 0) {\r\n            if (year % 100 == 0) {\r\n                if (year % 400 == 0) {\r\n                    return true;\r\n                } else {\r\n                    return false;\r\n                }\r\n            } else {\r\n                return true;\r\n            }\r\n        } else {\r\n            return false;\r\n        }\r\n    }\r\n    public static void arrayInverter() {\r\n        int[] array = {0,1,1,0,0,1,0,1,1,0};\r\n        for (int i = 0; i < array.length; i++) {\r\n            if (array[i] == 0) {\r\n                array[i] = 1;\r\n            }\r\n            else if (array[i] == 1) {\r\n                array[i] = 0;\r\n            }\r\n            }\r\n        }\r\n    public static void arrayFill() {\r\n        int[] array= new int[100];\r\n        for (int i = 1; i <= array.length; i++) {\r\n            array[i] = i;\r\n        }\r\n    }\r\n    public static void arrayModifier() {\r\n        int[] array = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};\r\n        for (int i = 0; i < array.length; i++) {\r\n            if (array[i] < 6 ) {\r\n                array[i] *= 2;\r\n            }\r\n        }\r\n    }\r\n    public static void arrayFillDiagonal() {\r\n        int[][] array = new int[5][5];\r\n        for (int i = 0; i < array.length; i++) {\r\n            array[i][i] = 1;\r\n            array[i][array.length - 1 - i] = 1;\r\n        }\r\n                }\r\n    public static void arrayCreator() {\r\n        Scanner sc = new Scanner(System.in);\r\n        System.out.println(\"Введите длину массива\");\r\n        int len = sc.nextInt();\r\n        System.out.println(\"Введите значение ячейки\");\r\n        int iniitialValue = sc.nextInt();\r\n        int[] array = new int[len];\r\n        for (int i = 0; i < len; i++) {\r\n            array[i] = iniitialValue;\r\n        }\r\n\r\n    }\r\n    }\r\n\r\n\r\n
+===================================================================
+diff --git a/Lesson1/Lesson1.java b/Lesson1/Lesson1.java
+--- a/Lesson1/Lesson1.java	
++++ b/Lesson1/Lesson1.java	
+@@ -4,20 +4,7 @@
+ 
+ public class Lesson1 {
+     public static void main(String[] args) {
+-    printThreeWords();
+-    checkSumSign();
+-    printColor();
+-    compareNumbers();
+-    checkSumAdd();
+-    checkModul();
+-    checkModulReturn();
+-    printSeveralString();
+-    isLeapYear();
+-    arrayInverter();
+     arrayFill();
+-    arrayModifier();
+-    arrayFillDiagonal();
+-    arrayCreator();
+     }
+ 
+     private static void printThreeWords() {
+@@ -129,7 +116,7 @@
+         }
+     public static void arrayFill() {
+         int[] array= new int[100];
+-        for (int i = 1; i <= array.length; i++) {
++        for (int i = 0; i < array.length; i++) {
+             array[i] = i;
+         }
+     }
