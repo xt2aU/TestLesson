@@ -86,45 +86,33 @@ public class MtsTest {
     @Test
     @DisplayName("Test Form Online Payment")
     public void testFormOnlinePayment() {
-        // Найди блок "Онлайн пополнение без комиссии"
+
         WebElement onlinePaymentBlock = driver.findElement(By.xpath("//*[@id=\"pay-section\"]/div/div/div[2]/section"));
 
-        // Найди поле для ввода номера телефона внутри этого блока
         WebElement phoneNumberField = onlinePaymentBlock.findElement(By.xpath("//*[@id=\"connection-phone\"]"));
 
-        // Найди поле для ввода суммы пополнения внутри этого блока
         WebElement amountField = onlinePaymentBlock.findElement(By.xpath("//*[@id=\"connection-sum\"]"));
 
-        // Найди поле для ввода e-mail внутри этого блока
         WebElement emailField = onlinePaymentBlock.findElement(By.xpath("//*[@id=\"connection-email\"]"));
 
-        // Найди кнопку "Продолжить" внутри этого блока
         WebElement continueButton = onlinePaymentBlock.findElement(By.xpath("//*[@id=\"pay-connection\"]/button"));
 
-        // Заполни поле для ввода номера телефона
         phoneNumberField.sendKeys("297777777");
 
-        // Заполни поле для ввода суммы пополнения
         amountField.sendKeys("100");
 
-        // Заполни поле для ввода e-mail
         emailField.sendKeys("ivanov2000@gmail.com");
 
-        // Кликни по кнопке "Продолжить"
         continueButton.click();
 
-        // Переключись на iframe, содержащий всплывающее окно
-        WebElement iframe = driver.findElement(By.xpath("/html/body/div[8]/div/iframe")); // Замени на фактический класс или идентификатор iframe
+        WebElement iframe = driver.findElement(By.className("bepaid-iframe"));
         driver.switchTo().frame(iframe);
 
-        // Найди всплывающее окно внутри iframe
-        WebElement popup = driver.findElement(By.xpath("/html/body/app-root")); // Замени на фактический класс или идентификатор всплывающего окна
+        WebElement popup = driver.findElement(By.xpath("//div[@class='app-wrapper']"));
 
-        // Проверь, что всплывающее окно отображается
         assertTrue(popup.isDisplayed(), "Всплывающее окно не отображается.");
 
-        // Вернись к основному контенту страницы
-        driver.switchTo().defaultContent();
+        //driver.switchTo().defaultContent();
     }
 
 }
